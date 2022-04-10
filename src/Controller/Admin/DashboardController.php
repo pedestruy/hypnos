@@ -3,6 +3,9 @@
 namespace App\Controller\Admin;
 
 use App\Entity\Users;
+use App\Entity\Sites;
+use App\Entity\Suites;
+use App\Repository\SuitesRepository;
 use EasyCorp\Bundle\EasyAdminBundle\Config\Crud;
 use EasyCorp\Bundle\EasyAdminBundle\Config\Dashboard;
 use EasyCorp\Bundle\EasyAdminBundle\Config\MenuItem;
@@ -41,12 +44,21 @@ class DashboardController extends AbstractDashboardController
     {
         yield MenuItem::linkToDashboard('Dashboard', 'fa fa-home');
 
-        yield MenuItem::section('Utilisateurs');
+    //    yield MenuItem::section('Gestion des Utilisateurs');
 
-        yield MenuItem::subMenu('Actions', 'fas fa-list')->setSubItems([
-            MenuItem::linkToCrud('créer', 'fas fa-plus', Users::class)->setAction(Crud::PAGE_NEW)
+        yield MenuItem::subMenu('Gestion des Utilisateurs')->setSubItems([
+            MenuItem::linkToCrud('Ajouter', 'fas fa-user-plus', Users::class)->setAction(Crud::PAGE_NEW),
+            MenuItem::linkToCrud('Liste', 'fas fa-list', Users::class)
         ]);
 
-        
+        yield MenuItem::subMenu('Gestion des Sites')->setSubItems([
+            MenuItem::linkToCrud('Ajouter', 'fas fa-map', Sites::class)->setAction(Crud::PAGE_NEW),
+            MenuItem::linkToCrud('Liste', 'fas fa-list', Sites::class)
+        ]);
+
+        yield MenuItem::subMenu('Gestion des Suites')->setSubItems([
+            MenuItem::linkToCrud('Ajouter', 'fas fa-map', Suites::class)->setAction(Crud::PAGE_NEW),
+            MenuItem::linkToCrud('Liste', 'fas fa-list', Suites::class)
+        ]);
     }
 }
