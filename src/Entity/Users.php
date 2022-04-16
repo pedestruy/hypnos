@@ -47,6 +47,11 @@ class Users
         $this->comments = new ArrayCollection();
         $this->reservations = new ArrayCollection();
     }
+    
+    public function __toString(): string
+    {
+        return $this->name;
+    }
 
     public function getId(): ?int
     {

@@ -41,4 +41,17 @@ class SitesCrudController extends AbstractCrudController
 
         parent::persistEntity($em, $entityInstance);
     }
+
+    public function deleteEntity(EntityManagerInterface $em, $entityInstance): void
+    {
+
+        if (!$entityInstance instanceof Sites) return;
+
+        foreach ($entityInstance->getSuite() as $suite){
+            $em->remove($suite);
+        }
+
+        parent::deleteEntity($em, $entityInstance);
+    }
+
 }

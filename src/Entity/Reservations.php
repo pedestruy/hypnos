@@ -24,7 +24,7 @@ class Reservations
 
     #[ORM\ManyToOne(targetEntity: suites::class, inversedBy: 'reservations')]
     private $suite;
-
+   
     #[ORM\ManyToOne(targetEntity: users::class, inversedBy: 'reservations')]
     #[ORM\JoinColumn(nullable: false)]
     private $user;
@@ -72,7 +72,10 @@ class Reservations
 
         return $this;
     }
-
+    public function __toString() : string
+    {
+        return $this->name;
+    }
     public function getSuite(): ?suites
     {
         return $this->suite;
