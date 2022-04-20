@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0811cc63-fa83-47bd-85c7-ff5ae1f999cd" name="Changes" comment="Création Home page">
-      <change afterPath="$PROJECT_DIR$/Procfile" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -169,7 +168,7 @@
       <option name="presentableId" value="Default" />
       <updated>1649975013539</updated>
       <workItem from="1649975015710" duration="217000" />
-      <workItem from="1649975241850" duration="86621000" />
+      <workItem from="1649975241850" duration="88936000" />
     </task>
     <task id="LOCAL-00001" summary="Création Home page">
       <created>1650115456617</created>
@@ -183,6 +182,9 @@
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="UnknownFeatures">
+    <option featureType="com.intellij.fileTypeFactory" implementationName="*.env" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
