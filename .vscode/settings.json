@@ -1,0 +1,6 @@
+{
+    "files.autoGuessEncoding": true,
+    "terminal.integrated.allowChords": true,
+    "github.autoPublish": false,
+    "github.customPullRequestDescription": "singleLine"
+}

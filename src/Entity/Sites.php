@@ -39,6 +39,9 @@ class Sites
     #[ORM\OneToMany(mappedBy: 'site', targetEntity: Suites::class)]
     private $suite;
 
+    #[ORM\Column(type: 'string', length: 255, nullable: true)]
+    private $picture;
+
     public function __construct()
     {
         $this->suite = new ArrayCollection();
@@ -165,5 +168,17 @@ class Sites
     public function __toString()
     {
         return $this->name;
+    }
+
+    public function getPicture(): ?string
+    {
+        return $this->picture;
+    }
+
+    public function setPicture(?string $picture): self
+    {
+        $this->picture = $picture;
+
+        return $this;
     }
 }

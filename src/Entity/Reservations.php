@@ -32,6 +32,9 @@ class Reservations
     #[ORM\Column(type: 'boolean')]
     private $active;
 
+    #[ORM\Column(type: 'datetime_immutable', nullable: true)]
+    private $updatedAt;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -108,6 +111,18 @@ class Reservations
     public function setActive(bool $active): self
     {
         $this->active = $active;
+
+        return $this;
+    }
+
+    public function getUpdatedAt(): ?\DateTimeImmutable
+    {
+        return $this->updatedAt;
+    }
+
+    public function setUpdatedAt(?\DateTimeImmutable $updatedAt): self
+    {
+        $this->updatedAt = $updatedAt;
 
         return $this;
     }

@@ -8,11 +8,14 @@ use EasyCorp\Bundle\EasyAdminBundle\Controller\AbstractCrudController;
 use EasyCorp\Bundle\EasyAdminBundle\Field\BooleanField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\DateTimeField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\IdField;
+use EasyCorp\Bundle\EasyAdminBundle\Field\ImageField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\NumberField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\TextField;
 
 class SitesCrudController extends AbstractCrudController
 {
+    public const SITES_BASE_PATH = 'upload/images/sites';
+    public const SITES_UPLOAD_DIR = 'public/upload/images/sites';
     public static function getEntityFqcn(): string
     {
         return Sites::class;
@@ -24,6 +27,9 @@ class SitesCrudController extends AbstractCrudController
         return [
             IdField::new('id')->hideOnForm(),
             TextField::new('name', 'Nom'),
+            ImageField::new('picture', 'Photo')
+                ->setBasePath(self::SITES_BASE_PATH)
+                ->setUploadDir(self::SITES_UPLOAD_DIR),
             TextField::new('address'),
             TextField::new('city'),
             NumberField::new('zip'),

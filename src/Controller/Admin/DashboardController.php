@@ -2,7 +2,6 @@
 
 namespace App\Controller\Admin;
 
-use App\Entity\Comments;
 use App\Entity\Contacts;
 use App\Entity\Reservations;
 use App\Entity\Users;
@@ -58,7 +57,7 @@ class DashboardController extends AbstractDashboardController
 
     public function configureMenuItems(): iterable
     {
-        yield MenuItem::linkToDashboard('Dashboard', 'fa fa-dashboard');
+        yield MenuItem::linkToRoute('Aller sur le site', 'fas fa-undo', 'app_home');
 
     //    yield MenuItem::section('Gestion des Utilisateurs');
 
@@ -67,12 +66,8 @@ class DashboardController extends AbstractDashboardController
             MenuItem::linkToCrud('Liste', 'fas fa-list', Users::class)
         ]);
 
-        yield MenuItem::subMenu('Commentaires', 'fas fa-comments')->setSubItems([
-            MenuItem::linkToCrud('Ajouter', 'fas fa-plus', Comments::class)->setAction(Crud::PAGE_NEW),
-            MenuItem::linkToCrud('Liste', 'fas fa-list', Comments::class)
-        ]);
         
-        yield MenuItem::subMenu('Contacts', 'fas fa-comments')->setSubItems([
+        yield MenuItem::subMenu('Contacts', 'fas fa-comment')->setSubItems([
             MenuItem::linkToCrud('Ajouter', 'fas fa-plus', Contacts::class)->setAction(Crud::PAGE_NEW),
             MenuItem::linkToCrud('Liste', 'fas fa-list', Contacts::class)
         ]);

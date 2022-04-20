@@ -2,6 +2,7 @@
 
 namespace App\Entity;
 
+use App\Model\TimestampedInterface;
 use App\Repository\CommentsRepository;
 use Doctrine\ORM\Mapping as ORM;
 
@@ -93,4 +94,5 @@ class Comments
 
         return $this;
     }
+
 }

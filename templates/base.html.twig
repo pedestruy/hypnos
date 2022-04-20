@@ -13,13 +13,14 @@
         {% block javascripts %}
             {{ encore_entry_script_tags('app') }}
         {% endblock %}
+
     </head>
 
     <body>
 
         <header>
 
-            <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+            <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark" style="background-color: #0c4a6e">
 
                 <div class="container-fluid">
 
@@ -40,7 +41,7 @@
                                 <a class="nav-link" href="#">Nos Etablissements</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#">Réserver/Booking</a>
+                                <a class="nav-link" href="{{ path('app_reservations') }}">Réserver/Booking</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="#">Contactez-nous</a>
@@ -49,8 +50,8 @@
 
                         </ul>
                         <div class="d-flex">
-                            <a class="btn btn-outline-secondary me-2" href="#">Connexion</a>
-                            <a class="btn btn-light" href="#">Inscription</a>
+                            <a class="btn btn-outline-secondary me-2" href="{{ path('app_login') }}">Connexion</a>
+                            <a class="btn btn-light" href="{{ path('app_register') }}">Inscription</a>
                         </div>
 
                     </div>
