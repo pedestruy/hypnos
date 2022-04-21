@@ -4,7 +4,7 @@ namespace App\Controller\Admin;
 
 use App\Entity\Contacts;
 use App\Entity\Reservations;
-use App\Entity\Users;
+use App\Entity\User;
 use App\Entity\Sites;
 use App\Entity\Subjects;
 use App\Entity\Suites;
@@ -62,8 +62,8 @@ class DashboardController extends AbstractDashboardController
     //    yield MenuItem::section('Gestion des Utilisateurs');
 
         yield MenuItem::subMenu('Utilisateurs', 'fas fa-user')->setSubItems([
-            MenuItem::linkToCrud('Ajouter', 'fas fa-user-plus', Users::class)->setAction(Crud::PAGE_NEW),
-            MenuItem::linkToCrud('Liste', 'fas fa-list', Users::class)
+            MenuItem::linkToCrud('Ajouter', 'fas fa-user-plus', User::class)->setAction(Crud::PAGE_NEW),
+            MenuItem::linkToCrud('Liste', 'fas fa-list', User::class)
         ]);
 
         
