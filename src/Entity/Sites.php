@@ -42,6 +42,9 @@ class Sites
     #[ORM\Column(type: 'string', length: 255, nullable: true)]
     private $picture;
 
+   // #[ORM\Column(type: 'string', length: 255, nullable: true)]
+   // private $image;
+
     public function __construct()
     {
         $this->suite = new ArrayCollection();
@@ -178,6 +181,18 @@ class Sites
     public function setPicture(?string $picture): self
     {
         $this->picture = $picture;
+
+        return $this;
+    }
+
+    public function getImage(): ?string
+    {
+        return $this->image;
+    }
+
+    public function setImage(?string $image): self
+    {
+        $this->image = $image;
 
         return $this;
     }
