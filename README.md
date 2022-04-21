@@ -3,10 +3,12 @@ J'ai récupéré le sujet 15 jours après sa mise en ligne, car je me suis tromp
 
 Cela m'était difficile de découvrir Heroku (habituellement les sites que je déployais étaient par FTP avec AMEN) et je n'utilisais pas symfony.
 
-Il reste un peu de paramétrage et d'esthetique pour terminer l'application.
+J'ai donc rencontré des problèmes de déploiement que je n'ai pas encore solutionné puisque EasyAdmin fonctionne bien en local, mais sur Heroku, une seule table accepte les insertions : Catégorie Comment.
 
-EasyAdmin ne fonctionne pas complètement sur Heroku mais est fonctionnel en local.
-
-Table subject ok, les autres ko.
+Il reste du paramétrage et de l'esthetique pour terminer l'application:
+Finir les restrictions d'accès et la customisation en fonction du rôle de l'utilisateur,
+L'affichage du "Catalogue" en javascript.
+Optimiser pour le référencement,
+Tester le code
 
 
