@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="0811cc63-fa83-47bd-85c7-ff5ae1f999cd" name="Changes" comment="Création Home page">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+    <list default="true" id="0811cc63-fa83-47bd-85c7-ff5ae1f999cd" name="Changes" comment="New DashboardController">
       <change beforePath="$PROJECT_DIR$/src/Controller/Admin/DashboardController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/Admin/DashboardController.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -201,7 +199,7 @@
       <workItem from="1649975241850" duration="147788000" />
       <workItem from="1650919048152" duration="832000" />
       <workItem from="1651343940803" duration="758000" />
-      <workItem from="1652043392940" duration="41499000" />
+      <workItem from="1652043392940" duration="41844000" />
     </task>
     <task id="LOCAL-00001" summary="Création Home page">
       <created>1650115456617</created>
@@ -217,7 +215,14 @@
       <option name="project" value="LOCAL" />
       <updated>1652220238706</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="New DashboardController">
+      <created>1652222977816</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1652222977816</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -241,6 +246,7 @@
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="Création Home page" />
-    <option name="LAST_COMMIT_MESSAGE" value="Création Home page" />
+    <MESSAGE value="New DashboardController" />
+    <option name="LAST_COMMIT_MESSAGE" value="New DashboardController" />
   </component>
 </project>
