@@ -9,6 +9,9 @@ Il reste du paramétrage et de l'esthetique pour terminer l'application:
 Finir les restrictions d'accès et la customisation en fonction du rôle de l'utilisateur,
 L'affichage du "Catalogue" en javascript.
 Optimiser pour le référencement,
-Tester le code
+Tester le code.
+
+IMPORTANT:
+Un lien hypertexte Contactez-nous en bas de la page d'accueil permet d'acceder à l'interface d'administration.
 
 
