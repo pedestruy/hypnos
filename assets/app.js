@@ -11,5 +11,13 @@ import './styles/app.scss';
 // start the Stimulus application
 import './bootstrap';
 
-var myCarousel = document.querySelector('#myCarousel');
-var carousel = new bootstrap.Carousel(myCarousel);
+const $ = require('jquery');
+// this "modifies" the jquery module: adding behavior to it
+// the bootstrap module doesn't export/return anything
+require('bootstrap');
+
+let myCarousel = document.querySelector('#myCarousel')
+let carousel = new bootstrap.Carousel(myCarousel, {
+    interval: 2000,
+    wrap: false
+})

@@ -17,9 +17,11 @@ class RegistrationFormType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options): void
     {
         $builder
-            ->add('email')
+            ->add('email', TextType::class, [
+                'label' => "email  "
+            ])
             ->add('name', TextType::class, [
-                'label' => 'Nom  '
+                'label' => "Nom  d'utilisateur  "
             ])
           //  ->add('active',true)
             ->add('plainPassword', RepeatedType::class, [
@@ -28,8 +30,8 @@ class RegistrationFormType extends AbstractType
                 'invalid_message' => 'Les mots de passe ne sont pas identiques',
                 'options' => ['attr' => ['class' => 'password-field']],
                 'required' => true,
-                'first_options'  => ['label' => 'Mot de passe'],
-                'second_options' => ['label' => 'Confirmation du Mot de passe'],
+                'first_options'  => ['label' => 'Mot de passe  '],
+                'second_options' => ['label' => 'Confirmation du Mot de passe  '],
                 'mapped' => false,
                 'attr' => ['autocomplete' => 'new-password'],
                 'constraints' => [

@@ -14,13 +14,14 @@
             {{ encore_entry_script_tags('app') }}
         {% endblock %}
 
-    </head>
+    {# <script   src="https://code.jquery.com/jquery-3.6.0.min.js"   integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="   crossorigin="anonymous"></script> #}
+</head>
 
     <body>
 
         <header>
 
-            <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark" style="background-color: #0c4a6e">
+            <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
 
                 <div class="container-fluid">
 
@@ -46,17 +47,17 @@
                             <li class="nav-item">
                                 <a class="nav-link" href="#">Contactez-nous</a>
                             </li>
+                            {% if is_granted('IS_AUTHENTICATED_FULLY') %}
                             <li class="nav-item">
                                 <a class="nav-link" href="{{ path('admin') }}">Admin</a>
-
                             </li>
-
+                            {% else %}
                         </ul>
                         <div class="d-flex">
                             <a class="btn btn-outline-secondary me-2" href="{{ path('app_login') }}">Connexion</a>
-                            <a class="btn btn-light" href="{{ path('app_register') }}">Inscription</a>
+                            <a class="btn btn-primary" href="{{ path('app_register') }}">Inscription</a>
                         </div>
-
+                        {% endif %}
                     </div>
 
                 </div>

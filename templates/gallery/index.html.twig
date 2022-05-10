@@ -35,14 +35,18 @@
 
             <div class="row">
                 <div class="col-lg-6">
-                    <img loading="lazy" width="320" height="180" alt="Suite Grace K" class="rounded-top" src="{{ asset('upload/images/suites/c_s4.jpg') }}">
-
-                    <h4 class="fw-bold">Suite Karl L</h4>
-                    <p class="text-start">650€ / nuit</p>
-                    <p><a class="btn btn-secondary" href="{{ path('app_reservations') }}">Réserver &raquo;</a></p>
+                    <div class="card">
+                        <div class="item-image"> <img src="{{ asset('upload/images/suites/c_s5.png') }}"> </div>
+                        <div class="item-content">
+                            <h3>Suite Grace K.</h3>
+                            <p>Vue mer</p>
+                            <div class="item-price"> <span>1850€/jour</span></div>
+                            <p><a class="btn btn-secondary" href="{{ path('app_reservations') }}">Réserver &raquo;</a></p>
+                        </div>
+                    </div>
                 </div>
                 <div class="col-lg-6">
-                    <img loading="lazy" width="320" height="180" alt="Suite Celeste" class="rounded-end" src="{{ asset('upload/images/suites/c_s5.png') }}">
+                    <img loading="lazy" width="320" height="180" alt="Suite Celeste" class="rounded-end" src="{{ asset('upload/images/suites/c_s4.jpg') }}">
 
                     <h4 class="fw-bold">Suite Celeste</h4>
                     <p class="text-start">2 650€ / nuit</p>

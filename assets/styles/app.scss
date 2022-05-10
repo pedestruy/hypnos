@@ -1,4 +1,5 @@
 @import"~bootstrap/scss/bootstrap.scss";
+
 /* GLOBAL STYLES
 -------------------------------------------------- */
 /* Padding below the footer and lighter body text */
@@ -93,9 +94,129 @@ body {
   }
 }
 
-.login-form{
-  width: 400px;
+.login-form, .register-form{
+  width: 50%;
   margin-left: auto;
+  align-content: center;
   margin-right: auto;
   margin-top: 50px;
+}
+
+.card {
+  height: 310px;
+  width: 320px;
+  background-color: #fff;
+  border-radius: 20px;
+  position: relative
+}
+
+.card .offer {
+  width: 150px;
+  height: 20px;
+  background-color: red;
+  position: absolute;
+  top: 28px;
+  left: -14px;
+  border-radius: 20px;
+  border-bottom-left-radius: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 15px;
+  font-weight: 700;
+  color: #fff
+}
+
+.card span:before {
+  position: absolute;
+  content: '';
+  background-color: red;
+  height: 30px;
+  width: 17px;
+  top: 20px;
+  left: 0;
+  border-radius: 10px;
+  z-index: -10
+}
+
+.card span:after {
+  position: absolute;
+  content: 'content';
+  background-color: #d70303;
+  height: 30px;
+  width: 17px;
+  top: 30px;
+  left: 0;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 20px;
+  z-index: -10
+}
+
+.card .item-image {
+  width: 320px;
+  height: 100px;
+  overflow: hidden;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px
+}
+
+.card .item-image img {
+  width: 320px;
+  height: 100px;
+  object-fit: cover;
+}
+
+.item-content {
+  padding: 10px
+}
+
+.item-content h3 {
+  font-size: 20px;
+  font-family: "Century Gothic", serif;
+}
+
+.item-content p {
+  font-size: 15px;
+  font-weight: 500
+}
+
+.item-price {
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-between
+}
+.btn-primary {
+  color: #fff;
+  background-color: #dab88b;
+  border-color: #dab88b;
+}
+.btn-primary:hover {
+  color: #dab88b;
+  background-color: #fff;
+  border-color: #dab88b;
+}
+
+.btn-secondary {
+  color: #fff;
+  background-color: #c84b31;
+  border-color: #c84b31;
+}
+.btn-secondary:hover {
+  color: #c84b31;
+  background-color: #fff;
+  border-color: #c84b31;
+}
+.btn-outline-secondary {
+  color: #dab88b;
+  background-color: #1F2125;
+  border-color: #dab88b;
+}
+.btn-outline-secondary:hover {
+  color: #fff;
+  background-color: #dab88b;
+  border-color: #dab88b;
+}
+.navbar-dark{
+  background-color: #0c4a6e;
+
 }
